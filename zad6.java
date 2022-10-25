@@ -1,11 +1,26 @@
+import java.util.Scanner;
+
 public class zad6 {
 
-public static double function6(int a){
+    public static int silnia(int a){
+        int silnia=1;
+        for (int i=1;i<=a;i++){
+            silnia=silnia*i;
+        }
+        return silnia;
+    }
 
-    double b=0;
-    b=Math.sqrt(a);
-return b;
-}//function6
+    public static void function6(){
+        int[] tab=new int[5];
+        Scanner input=new Scanner(System.in);
+        for (int i = 0; i < tab.length; i++) {
+            System.out.println("Podaj liczbe: ");
+            tab[i]=input.nextInt();
+        }//for
+        for (int i = 0; i < tab.length; i++) {
+            System.out.println(silnia(tab[i]));
+        }
 
+    }
 
 }
